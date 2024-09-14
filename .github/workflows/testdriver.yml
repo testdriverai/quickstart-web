@@ -51,6 +51,7 @@ jobs:
       - uses: testdriverai/action@main
         with:
           key: ${{ secrets.TESTDRIVER_API_KEY }}
+          branch: yassine/fix-encoding-issue
           prompt: ${{ env.MARKDOWN_CONTENT }}  # Use the content of the file from the environment
           prerun: |
             cd $env:TEMP
