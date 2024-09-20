@@ -1,0 +1,35 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to mobile dimensions.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to mobile dimensions.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - i
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - m
+  - prompt: Click on the mobile menu icon.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the mobile menu icon.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: mobile menu icon in the top right corner
+        action: click
