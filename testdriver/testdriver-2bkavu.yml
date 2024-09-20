@@ -1,0 +1,26 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the homepage.
+    commands:
+      - command: hover-text
+        text: PubNub
+        description: logo at the top left
+        action: click
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: scroll-until-text
+        text: Copyright 2024
+        direction: down
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: scroll-until-text
+        text: Copyright 2024
+        direction: down
