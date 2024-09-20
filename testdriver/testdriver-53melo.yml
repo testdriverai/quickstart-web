@@ -1,0 +1,18 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Trigger any action necessitating an error message
+    commands:
+      - command: hover-text
+        text: Contact Sales
+        description: button to contact sales
+        action: click
+  - prompt: Trigger any action necessitating an error message
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button at the bottom of the form
+        action: click
