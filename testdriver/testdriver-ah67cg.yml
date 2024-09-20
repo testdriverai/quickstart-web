@@ -1,0 +1,68 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to various dimensions
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to various dimensions
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - x
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - r
+  - prompt: Resize the browser window to various dimensions
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - x
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - r
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - x
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - r
