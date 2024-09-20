@@ -1,0 +1,42 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the resources page.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Navigate to the resources page.
+    commands:
+      - command: hover-text
+        text: Blog
+        description: link under the Resources dropdown menu
+        action: click
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: hover-text
+        text: Maximizing Engagement & ROI for Virtual Events
+        description: title of the first article
+        action: click
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: scroll-until-text
+        text: Download
+        direction: down
+      - command: hover-text
+        text: Download
+        description: downloadable resource link
+        action: click
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: scroll-until-text
+        text: Download
+        direction: down
+      - command: hover-text
+        text: Download
+        description: downloadable resource link
+        action: click
