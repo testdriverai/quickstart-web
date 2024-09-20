@@ -1,0 +1,80 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: address bar in Google Chrome
+        action: click
+  - prompt: Click on "Contact Sales" button.
+    commands:
+      - command: hover-text
+        text: Contact sales
+        description: Contact Sales button
+        action: click
+  - prompt: Assert that the contact sales form is displayed.
+    commands:
+      - command: assert
+        expect: the contact sales form is displayed
+  - prompt: Fill in the contact sales form fields with test data.
+    commands:
+      - command: hover-text
+        text: First Name
+        description: First Name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name
+        description: Last Name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email Address
+        description: Email Address field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Company Name
+        description: Company Name field
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Use Case
+        description: Use Case dropdown
+        action: click
+      - command: type
+        text: Testing
+      - command: hover-text
+        text: Country
+        description: Country dropdown
+        action: click
+      - command: type
+        text: United States
+      - command: hover-text
+        text: Message
+        description: Message field
+        action: click
+      - command: type
+        text: This is a test message.
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: Submit button
+        action: click
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: Submit button
+        action: click
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: Submit button
+        action: click
