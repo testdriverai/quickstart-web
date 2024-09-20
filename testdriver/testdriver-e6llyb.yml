@@ -1,0 +1,86 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Scroll to the bottom of the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+  - prompt: Scroll to the bottom of the homepage.
+    commands:
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: down
+  - prompt: Assert that the footer is visible.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: assert
+        expect: the footer is visible
+  - prompt: Click on each link in the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: About Us
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Privacy Policy
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Terms of Service
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Contact Us
+        description: link in the footer
+        action: click
+  - prompt: Click on each link in the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Terms of Service
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Contact Us
+        description: link in the footer
+        action: click
+  - prompt: Click on each link in the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: About Us
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Privacy Policy
+        description: link in the footer
+        action: click
+      - command: hover-text
+        text: Terms of Service
+        description: link in the footer
+        action: click
