@@ -1,0 +1,24 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Log in to the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Log in to the website.
+    commands:
+      - command: hover-text
+        text: LOGIN
+        description: login button in the header
+        action: click
+  - prompt: Log in to the website.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email address input field
+        action: click
+      - command: type
+        text: testuser@example.com
