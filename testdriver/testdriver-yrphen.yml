@@ -1,0 +1,23 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the search icon in the webpage content.
+    commands:
+      - command: hover-image
+        description: search icon in the webpage content
+        action: click
+  - prompt: Click on the search icon in the webpage content.
+    commands:
+      - command: hover-image
+        description: search icon in the webpage content
+        action: click
+  - prompt: Click on the search icon in the webpage content.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: search icon in the webpage content
+        action: click
