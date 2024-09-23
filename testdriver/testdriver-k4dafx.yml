@@ -1,0 +1,96 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: address bar
+        action: click
+  - prompt: Click on "Try for free" button.
+    commands:
+      - command: hover-text
+        text: Try for free
+        description: button in the header
+        action: click
+  - prompt: Assert that the sign-up form is displayed.
+    commands:
+      - command: assert
+        expect: Register for free is displayed
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name input field
+        action: click
+      - command: type
+        text: TestFirstName
+      - command: hover-text
+        text: Last name
+        description: last name input field
+        action: click
+      - command: type
+        text: TestLastName
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: TestPassword123
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name input field
+        action: click
+      - command: type
+        text: TestFirstName
+      - command: hover-text
+        text: Last name
+        description: last name input field
+        action: click
+      - command: type
+        text: TestLastName
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: TestPassword123
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name input field
+        action: click
+      - command: type
+        text: TestFirstName
+      - command: hover-text
+        text: Last name
+        description: last name input field
+        action: click
+      - command: type
+        text: TestLastName
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: TestPassword123
