@@ -1,0 +1,12 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Trigger any action necessitating an error message
+    commands:
+      - command: hover-text
+        text: Search
+        description: search icon in the webpage content
+        action: click
