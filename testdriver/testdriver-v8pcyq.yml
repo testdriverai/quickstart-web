@@ -1,0 +1,66 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Contact Sales" button.
+    commands:
+      - command: hover-text
+        text: Contact sales
+        description: button to contact sales
+        action: click
+  - prompt: Assert that the contact sales form is displayed.
+    commands:
+      - command: assert
+        expect: Find out how PubNub can help your business
+  - prompt: Fill in the contact sales form fields with test data.
+    commands:
+      - command: hover-text
+        text: First Name *
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name *
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email Address *
+        description: email address field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Company Name *
+        description: company name field
+        action: click
+      - command: type
+        text: ExampleCorp
+      - command: hover-text
+        text: Message *
+        description: message field
+        action: click
+      - command: type
+        text: This is a test message.
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button at the bottom of the form
+        action: click
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button at the bottom of the form
+        action: click
+  - prompt: Click on the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button at the bottom of the form
+        action: click
