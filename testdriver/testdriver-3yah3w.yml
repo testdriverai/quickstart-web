@@ -1,0 +1,31 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the pricing page.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that the pricing plans are displayed correctly.
+    commands:
+      - command: assert
+        expect: Platform Free
+      - command: assert
+        expect: Platform Pro
+      - command: assert
+        expect: Platform Starter
+  - prompt: Assert that there are no broken images or links in the pricing page.
+    commands:
+      - command: assert
+        expect: Platform Free
+      - command: assert
+        expect: Platform Pro
+      - command: assert
+        expect: Platform Starter
+      - command: hover-image
+        description: image in Platform Free section
+        action: hover
