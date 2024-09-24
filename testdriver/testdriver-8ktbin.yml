@@ -1,0 +1,30 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Scroll to the bottom right corner of the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: right
+  - prompt: Scroll to the bottom right corner of the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: right
+  - prompt: Scroll to the bottom right corner of the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+      - command: scroll
+        direction: right
