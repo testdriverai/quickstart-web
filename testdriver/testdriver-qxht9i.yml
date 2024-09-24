@@ -1,0 +1,43 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: pubnub.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll-until-text
+        text: Copyright 2024
+        direction: down
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+      - command: wait
+        timeout: 2000
+      - command: scroll-until-text
+        text: Copyright 2024
+        direction: down
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
