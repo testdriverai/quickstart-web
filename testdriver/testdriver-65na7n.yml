@@ -1,0 +1,40 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the search icon in the webpage content.
+    commands:
+      - command: hover-image
+        description: search icon in the webpage content
+        action: click
+  - prompt: Assert that the search field is displayed.
+    commands:
+      - command: assert
+        expect: the search field is displayed
+  - prompt: Type a search term into the search field.
+    commands:
+      - command: hover-text
+        text: Search or ask anything
+        description: search field
+        action: click
+      - command: type
+        text: real-time developer platform
+  - prompt: Press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the search results page is displayed.
+    commands:
+      - command: assert
+        expect: the search results page is displayed
+  - prompt: Assert that the search results page is displayed.
+    commands:
+      - command: assert
+        expect: the search results page is displayed
+  - prompt: Assert that search results are relevant to the search term.
+    commands:
+      - command: assert
+        expect: the search results are relevant to the search term
