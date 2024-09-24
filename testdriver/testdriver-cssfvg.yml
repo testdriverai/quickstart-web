@@ -1,0 +1,64 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the pricing page.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that the pricing plans are displayed correctly.
+    commands:
+      - command: assert
+        expect: Platform Free is displayed
+      - command: assert
+        expect: Platform Starter is displayed
+      - command: assert
+        expect: Platform Pro is displayed
+  - prompt: Assert that there are no broken images or links in the pricing page.
+    commands:
+      - command: assert
+        expect: Create an Account button is displayed
+      - command: assert
+        expect: Contact Sales button is displayed
+  - prompt: Click on each pricing plan.
+    commands:
+      - command: hover-text
+        text: Create an Account
+        description: button under Platform Free
+        action: click
+      - command: hover-text
+        text: Create an Account
+        description: button under Platform Starter
+        action: click
+      - command: hover-text
+        text: Contact Sales
+        description: button under Platform Pro
+        action: click
+  - prompt: Click on each pricing plan.
+    commands:
+      - command: hover-text
+        text: Create an Account
+        description: button under Platform Starter
+        action: click
+      - command: wait
+        timeout: 5000
+      - command: hover-text
+        text: Contact Sales
+        description: button under Platform Pro
+        action: click
+  - prompt: Click on each pricing plan.
+    commands:
+      - command: hover-text
+        text: Create an Account
+        description: button under Platform Starter
+        action: click
+      - command: wait
+        timeout: 5000
+      - command: hover-text
+        text: Contact Sales
+        description: button under Platform Pro
+        action: click
