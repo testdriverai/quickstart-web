@@ -1,0 +1,90 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the developer documentation page.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+      - command: hover-text
+        text: Documentation
+        description: link in the dropdown menu
+        action: click
+  - prompt: Assert that the documentation page loads without errors.
+    commands:
+      - command: assert
+        expect: PubNub Guides
+  - prompt: Assert that all sections of the documentation are visible and clickable.
+    commands:
+      - command: hover-text
+        text: API Security
+        description: section title
+        action: click
+      - command: hover-text
+        text: SDK vs API
+        description: section title
+        action: click
+      - command: hover-text
+        text: Webhook vs API
+        description: section title
+        action: click
+  - prompt: Assert that all sections of the documentation are visible and clickable.
+    commands:
+      - command: hover-text
+        text: Common Threats to API Security
+        description: section title
+        action: click
+      - command: hover-text
+        text: OAuth 2.0
+        description: section title
+        action: click
+      - command: hover-text
+        text: OpenID Connect (OIDC)
+        description: section title
+        action: click
+  - prompt: Assert that there are no broken links in the documentation.
+    commands:
+      - command: hover-text
+        text: OpenID Connect (OIDC)
+        description: section title
+        action: click
+      - command: hover-text
+        text: JSON Web Tokens (JWT)
+        description: section title
+        action: click
+      - command: hover-text
+        text: Transport Layer Security (TLS)
+        description: section title
+        action: click
+  - prompt: Assert that there are no broken links in the documentation.
+    commands:
+      - command: hover-text
+        text: OpenID Connect (OIDC)
+        description: section title
+        action: click
+      - command: hover-text
+        text: JSON Web Tokens (JWT)
+        description: section title
+        action: click
+      - command: hover-text
+        text: Transport Layer Security (TLS)
+        description: section title
+        action: click
+  - prompt: Assert that there are no broken links in the documentation.
+    commands:
+      - command: hover-text
+        text: OpenID Connect (OIDC)
+        description: section title
+        action: click
+      - command: hover-text
+        text: JSON Web Tokens (JWT)
+        description: section title
+        action: click
+      - command: hover-text
+        text: Transport Layer Security (TLS)
+        description: section title
+        action: click
