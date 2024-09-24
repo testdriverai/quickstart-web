@@ -1,0 +1,50 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Resize the browser window to mobile dimensions.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - i
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - m
+  - prompt: Click on the mobile menu icon.
+    commands:
+      - command: hover-text
+        text: ≡
+        description: mobile menu icon
+        action: click
+  - prompt: Click on the mobile menu icon.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - i
+      - command: wait
+        timeout: 2000
+      - command: press-keys
+        keys:
+          - control
+          - shift
+          - m
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: ≡
+        description: mobile menu icon
+        action: click
+  - prompt: Click on the mobile menu icon.
+    commands:
+      - command: hover-text
+        text: ≡
+        description: mobile menu icon
+        action: click
