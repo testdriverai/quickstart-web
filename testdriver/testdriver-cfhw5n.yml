@@ -1,0 +1,46 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Products" link in the main navigation.
+    commands:
+      - command: hover-text
+        text: Products
+        description: link in the main navigation
+        action: click
+  - prompt: Assert that the products page is loaded.
+    commands:
+      - command: assert
+        expect: The complete real-time developer platform
+  - prompt: Click on "Solutions" link in the main navigation.
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: link in the main navigation
+        action: click
+  - prompt: Assert that the solutions page is loaded.
+    commands:
+      - command: assert
+        expect: The complete real-time developer platform
+  - prompt: Click on "Pricing" link in the main navigation.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the main navigation
+        action: click
+  - prompt: Assert that the pricing page is loaded.
+    commands:
+      - command: assert
+        expect: Pricing and Support
+  - prompt: Click on "Developers" link in the main navigation.
+    commands:
+      - command: hover-text
+        text: Developers
+        description: link in the main navigation
+        action: click
+  - prompt: Assert that the developers page is loaded.
+    commands:
+      - command: assert
+        expect: PubNub for Developers
