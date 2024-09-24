@@ -1,0 +1,32 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the resources page.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Navigate to the resources page.
+    commands:
+      - command: hover-text
+        text: Guides
+        description: link in the resources dropdown
+        action: click
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: hover-text
+        text: API Security
+        description: downloadable resource link
+        action: click
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Click on a downloadable resource link.
+    commands:
+      - command: scroll
+        direction: down
