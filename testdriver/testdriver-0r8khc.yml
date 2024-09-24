@@ -1,0 +1,80 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Try for free" button.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Try for free" button.
+    commands:
+      - command: hover-text
+        text: Try for free
+        description: button in the top right corner
+        action: click
+  - prompt: Assert that the sign-up form is displayed.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: TestFirstName
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: TestLastName
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: TestPassword123
+  - prompt: Fill in the sign-up form fields with test data.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: TestFirstName
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: TestLastName
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: TestPassword123
