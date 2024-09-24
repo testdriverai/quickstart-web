@@ -1,0 +1,90 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Home
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: About Us
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Services
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Contact
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Home
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: About Us
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Services
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Contact
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Home
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: About Us
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Services
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Contact
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
