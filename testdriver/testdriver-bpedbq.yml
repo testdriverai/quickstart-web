@@ -1,0 +1,27 @@
+version: 4.0.44
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: hover-text
+        text: Products
+        description: Products link in the header
+        action: click
+      - command: wait
+        timeout: 5000
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: hover-text
+        text: Overview
+        description: Overview link in the Products dropdown
+        action: click
+      - command: wait
+        timeout: 5000
+  - prompt: Assert that all images on the site load correctly.
+    commands:
+      - command: scroll-until-image
+        description: PubNub logo in the overview section
+        direction: down
