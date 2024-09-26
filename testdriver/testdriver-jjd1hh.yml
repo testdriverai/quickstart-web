@@ -1,0 +1,14 @@
+version: 4.0.49
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - c
+          - d
+          - space
+          - /
+          - z
+          - enter
