@@ -1,0 +1,32 @@
+version: 4.0.49
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate through various pages on the website.
+    commands:
+      - command: hover-text
+        text: Products
+        description: products menu in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Solutions
+        description: solutions menu in the header
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Pricing
+        description: pricing menu in the header
+        action: click
+  - prompt: Assert that the content
+    commands:
+      - command: focus-application
+        name: Google Chrome
