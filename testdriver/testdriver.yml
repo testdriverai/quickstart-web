@@ -1,0 +1,27 @@
+version: 4.0.49
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to various dimensions
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Resize the browser window to various dimensions
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - alt
+          - space
+      - command: press-keys
+        keys:
+          - s
+      - command: press-keys
+        keys:
+          - right
+          - right
+          - down
+          - down
