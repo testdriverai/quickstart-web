@@ -1,0 +1,21 @@
+version: 4.0.49
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Start Building" button on the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Start Building" button on the homepage.
+    commands:
+      - command: hover-text
+        text: Start Building
+        description: button on the homepage
+        action: click
+  - prompt: Click on the "Start Building" button on the homepage.
+    commands:
+      - command: scroll-until-text
+        text: Start Building
+        direction: down
