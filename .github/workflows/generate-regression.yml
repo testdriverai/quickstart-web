@@ -2,6 +2,10 @@ name: TestDriver.ai / Generate / Regression
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: [TestDriver.ai / Generate / Explore]
+    types:
+      - completed
 
 jobs:
   gather-markdown-files:
