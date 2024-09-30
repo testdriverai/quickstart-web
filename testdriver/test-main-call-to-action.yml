@@ -1,0 +1,34 @@
+version: 4.0.50
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Locate the "Start Building" button.
+    commands:
+      - command: hover-text
+        text: Start Building
+        description: button to start building
+        action: hover
+  - prompt: Click the "Start Building" button.
+    commands:
+      - command: hover-text
+        text: Start Building
+        description: button to start building
+        action: click
+  - prompt: Click the "Start Building" button.
+    commands:
+      - command: scroll-until-text
+        text: Start Building
+        direction: down
+      - command: hover-text
+        text: Start Building
+        description: button to start building
+        action: click
+  - prompt: Click the "Start Building" button.
+    commands:
+      - command: scroll-until-text
+        text: Start Building
+        direction: down
+      - command: hover-text
+        text: Start Building
+        description: button to start building
+        action: click
