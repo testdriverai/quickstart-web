@@ -19,6 +19,10 @@ on:
       GH_TOKEN:
         required: true
         description: The GitHub token
+      LOGIN_USERNAME:
+        description: The username to use for login
+      LOGIN_PASSWORD:
+        description: The password to use for login
     outputs:
       pr-branch:
         value: ${{ jobs.exploratory.outputs.pr-branch }}
@@ -37,12 +41,34 @@ jobs:
         name: Create PR branch name
         shell: bash
         run: echo "pr-branch=testdriver/exploratory-${{ github.run_id }}-${{ github.run_attempt }}" >> $GITHUB_OUTPUT
+
+      - uses: "actions/github-script@v6"
+        id: create-prompt
+        env:
+          LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
+          LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+        with:
+          script: |
+            const username = process.env.LOGIN_USERNAME
+            const password = process.env.LOGIN_PASSWORD
+            let instructions = [
+              "/generate web 10",
+              "/summarize"
+            ]
+            if (username || password){
+              instructions = [
+                `login with username "${username}" and password "${password}"`,
+                ...instructions,
+              ]
+            }
+            const prompt = instructions.map((instruction, i) => `${i + 1}. ${instruction}`).join("\n")
+            console.log(prompt)
+            return prompt
+
       - uses: testdriverai/action@main
         with:
           key: ${{ secrets.key }}
-          prompt: |
-            1. /generate web 10
-            2. /summarize
+          prompt: ${{ fromJson(steps.create-prompt.outputs.result) }}
           prerun: |
             cd $env:TEMP
             npm init -y
