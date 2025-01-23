@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  statuses: write
+
 jobs:
   gather-test-files:
     name: Setup Test Matrix (./testdriver/*.yml)
@@ -42,11 +45,11 @@ jobs:
       - name: Display filename being tested
         run: |
           echo "Running job for file: ${{ matrix.test }}"
-      
+
       - uses: testdriverai/action@main
         with:
           key: ${{ secrets.TESTDRIVER_API_KEY }}
-          prompt: 1. /run testdriver/${{ matrix.test }} 
+          prompt: 1. /run testdriver/${{ matrix.test }}
           prerun: |
             cd $env:TEMP
             npm init -y
