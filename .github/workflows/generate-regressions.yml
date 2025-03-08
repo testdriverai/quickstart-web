@@ -24,6 +24,10 @@ on:
       GH_TOKEN:
         required: true
         description: The GitHub token
+      LOGIN_USERNAME:
+        description: The username to use for login
+      LOGIN_PASSWORD:
+        description: The password to use for login
 
 jobs:
   gather-markdown-files:
@@ -74,17 +78,44 @@ jobs:
         shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
         id: extract_branch
+
+      - uses: "actions/github-script@v6"
+        id: create-prompt
+        env:
+          LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
+          LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+          markdown: ${{ env.MARKDOWN_CONTENT }}
+        with:
+          script: |
+            let markdown = process.env.markdown
+            const username = process.env.LOGIN_USERNAME
+            const password = process.env.LOGIN_PASSWORD
+            let instructions = []
+            if(username || password){
+              instructions.push(`login with username "${username}" and password "${password}"`)
+            }
+            if(markdown){
+              markdown = markdown
+                .split("\n")
+                .filter(line => !line.trim().startsWith("#"))
+                .map(line => line.trim().replace(/^\s*[0-9]*\s*(\.|\-)\s*/, ""))
+                .filter(line => line.length > 0)
+              instructions.push(...markdown)
+            }
+            instructions.push("/summarize")
+
+            const prompt = instructions.map((instruction, i) => `${i + 1}. ${instruction}`).join("\n")
+            return prompt
+
       - uses: testdriverai/action@main
         with:
           key: ${{ secrets.key }}
-          prompt: |
-            ${{ env.MARKDOWN_CONTENT }}  # Use the content of the file from the environment
-            1. /summarize
+          prompt: ${{ steps.create-prompt.outputs.result }}
           prerun: |
             cd $env:TEMP
             npm init -y
             npm install dashcam-chrome
-            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ vars.TESTDRIVER_WEBSITE }}"
+            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ inputs.website-url }}"
             exit
           create-pr: true
           pr-base: ${{ inputs.base-branch }}
