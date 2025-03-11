@@ -1,0 +1,25 @@
+version: 4.2.13
+session: 67d009da6ac63cc8b4cc2e51
+steps:
+  - prompt: Click on "Pricing" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: pricing link in the navigation menu
+        action: click
+  - prompt: Assert that the Pricing page loads successfully.
+    commands:
+      - command: assert
+        expect: Pricing and Support
+  - prompt: >-
+      Assert that there are no errors displayed on the page.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: no error messages displayed
+  - prompt: >-
+      Assert that there are no errors displayed on the page.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: no error messages displayed
