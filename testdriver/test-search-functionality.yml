@@ -1,0 +1,26 @@
+version: 4.2.13
+session: 67d009d7e33a885faede540d
+steps:
+  - prompt: Click on the search icon.
+    commands:
+      - command: hover-image
+        description: search icon in the webpage content
+        action: click
+  - prompt: Enter a search term, such as "SDK".
+    commands:
+      - command: hover-text
+        text: Search or ask anything
+        description: search input field
+        action: click
+      - command: type
+        text: SDK
+  - prompt: Assert that the search results are displayed.
+    commands:
+      - command: assert
+        expect: search results are displayed for "SDK"
+  - prompt: >-
+      Assert there are no errors in the search results.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: no error messages are visible in the search results
