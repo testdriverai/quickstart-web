@@ -1,0 +1,55 @@
+version: 4.2.13
+session: 67d009dc6ac63cc8b4cc2e54
+steps:
+  - prompt: Click on "Contact Sales" button.
+    commands:
+      - command: hover-text
+        text: Contact Sales
+        description: red button in the top right of the header
+        action: click
+  - prompt: Fill in the contact form with test data.
+    commands:
+      - command: hover-text
+        text: First Name
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+  - prompt: Fill in the contact form with test data.
+    commands:
+      - command: hover-text
+        text: Last Name
+        description: last name input field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email Address
+        description: email address input field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Company Name
+        description: company name input field
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Use Case
+        description: use case dropdown
+        action: click
+      - command: type
+        text: General Inquiry
+      - command: hover-text
+        text: Country
+        description: country dropdown
+        action: click
+      - command: type
+        text: United States
+      - command: hover-text
+        text: Message
+        description: message input field
+        action: click
+      - command: type
+        text: This is a test message.
