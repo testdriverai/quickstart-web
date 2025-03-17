@@ -11,11 +11,9 @@ on:
     inputs:
       website-url:
         type: string
-        required: true
         description: The URL of the website to test
       base-branch:
         type: string
-        required: true
         description: The branch name of the pull request
     secrets:
       key:
