@@ -9,13 +9,7 @@ permissions:
 on:
   pull_request:
     branches:
-      - main  # Run on PRs targeting the main branch
-  workflow_dispatch:
-    inputs:
-      prompt:
-        description: "Enter the prompt for TestDriver"
-        required: true
-        default: 1. open the browser
+      - main 
 
 jobs:
   manual:
@@ -24,7 +18,7 @@ jobs:
       - uses: testdriverai/action@main
         with:
           key: ${{ secrets.TESTDRIVER_API_KEY }}
-          prompt: ${{ github.event.inputs.prompt }}
+          prompt: 1. open the browser
           prerun: |
             cd $env:TEMP
             npm init -y
