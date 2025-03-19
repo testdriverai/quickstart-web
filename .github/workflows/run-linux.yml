@@ -7,6 +7,9 @@ permissions:
   pull-requests: write
 
 on:
+  pull_request:
+    branches:
+      - main  # Run on PRs targeting the main branch
   workflow_dispatch:
     inputs:
       prompt:
