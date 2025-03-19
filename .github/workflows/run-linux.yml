@@ -15,7 +15,7 @@ on:
       prompt:
         description: "Enter the prompt for TestDriver"
         required: true
-        default: . /generate web 10
+        default: 1. open the browser
 
 jobs:
   manual:
