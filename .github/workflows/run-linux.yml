@@ -26,7 +26,7 @@ jobs:
             Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ vars.TESTDRIVER_WEBSITE }}"
             exit
           create-pr: true
-          version: "5.0.0-beta.2"
+          version: "5.0.0-beta.3"
           pr-title: "TestDriver.ai / Generate Test Plans"
           pr-branch: testdriver/generate-${{ github.run_id }}-${{ github.run_attempt }}
         env:
