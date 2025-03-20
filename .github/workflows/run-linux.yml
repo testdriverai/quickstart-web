@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: testdriverai/action@main
         with:
+          os: linux
           key: ${{ secrets.TESTDRIVER_API_KEY }}
           prompt: 1. open the browser
           prerun: |
