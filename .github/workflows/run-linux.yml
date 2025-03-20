@@ -20,10 +20,6 @@ jobs:
           key: ${{ secrets.TESTDRIVER_API_KEY }}
           prompt: 1. open the browser
           prerun: |
-            cd $env:TEMP
-            npm init -y
-            npm install dashcam-chrome
-            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ vars.TESTDRIVER_WEBSITE }}"
             exit
           create-pr: true
           version: "5.0.0-beta.8"
