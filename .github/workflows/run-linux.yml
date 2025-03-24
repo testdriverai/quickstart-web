@@ -23,7 +23,7 @@ jobs:
           prerun: |
             exit
           create-pr: true
-          version: "5.0.0-beta.8"
+          version: "5.0.7"
           pr-title: "TestDriver.ai / Generate Test Plans"
           pr-branch: testdriver/generate-${{ github.run_id }}-${{ github.run_attempt }}
         env:
