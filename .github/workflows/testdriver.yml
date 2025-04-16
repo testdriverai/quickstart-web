@@ -55,7 +55,7 @@ jobs:
         with:
           key: ${{ secrets.TESTDRIVER_API_KEY }}
           os: ${{ matrix.os }}
-          version: "5.2.3"
+          version: "5.3.9"
           prompt: 1. /run testdriver/${{ matrix.test }}
           prerun: |
             cd $env:TEMP
