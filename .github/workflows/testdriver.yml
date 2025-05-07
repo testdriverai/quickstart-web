@@ -52,7 +52,7 @@ jobs:
           version: "5.5.5"
           prerun: |
             exit
-          key: ${{ secrets.TESTDRIVER_API_KEY }}
+          key: ${{ secrets.TD_API_KEY }}
           prompt: | 
             1. /run testdriver/${{ matrix.test }}
         env:
