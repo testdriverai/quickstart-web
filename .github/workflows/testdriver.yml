@@ -11,8 +11,8 @@ on:
     branches: ["main"]
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *" 
+  # schedule:
+  #   - cron: "0 0 * * *" 
 
 jobs:
   gather-test-files:
